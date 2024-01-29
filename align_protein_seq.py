@@ -7,7 +7,8 @@ from Bio.SubsMat import MatrixInfo as matlist
 
 
 
-fasta_contents = open('/stanley/genetics/analysis/epi25/sc/wave5/misc/Homo_sapiens.GRCh38.pep.all.fa').read().strip().split('\n')
+# fasta files under gs://nnfc-fdp-konrad-public/protein_fasta/
+fasta_contents = open('Homo_sapiens.GRCh38.pep.all.fa').read().strip().split('\n') 
 ensembl2sequence_dictionary = dict()
 current_header = None
 sequence_buffer = ''
@@ -22,7 +23,7 @@ for line in fasta_contents:
         sequence_buffer += line.strip()
 
 
-fasta_contents = open('/stanley/genetics/analysis/epi25/sc/wave5/misc/uniprot_sprot.fasta').read().strip().split('\n')
+fasta_contents = open('uniprot_sprot.fasta').read().strip().split('\n')
 uniprot2sequence_dictionary = dict()
 current_header = None
 sequence_buffer = ''
